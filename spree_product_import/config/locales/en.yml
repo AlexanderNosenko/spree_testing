@@ -1,0 +1,13 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+en:
+  spree:
+    product_imports:
+      new: "Add Import"
+      list: "Imports"
+      status_uploaded: "Uploaded"
+      status_complete: "Complete"
+      status_failed: "Failed"

@@ -1,0 +1,2 @@
+<!-- insert_bottom 'ul' -->
+<%= tab :product_imports, match_path: '/product_imports', label: Spree.t('product_imports.list') %>

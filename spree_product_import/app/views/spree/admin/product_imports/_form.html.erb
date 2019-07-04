@@ -1,0 +1,5 @@
+<%= f.field_container :data_file do %>
+  <%= f.label :data_file, t('form.product_import.new.data_file') %>
+  <%= f.file_field :data_file %>
+  <%= f.error_message_on :data_file %>
+<% end %>
