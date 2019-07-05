@@ -16,7 +16,7 @@ tmp
 /public/system/*
 !/log/.keep
 !/tmp/.keep
-
+/spree_product_import/spec/dummy
 /node_modules
 /yarn-error.log
 
