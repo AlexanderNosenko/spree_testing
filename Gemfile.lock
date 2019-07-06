@@ -3,6 +3,7 @@ PATH
   specs:
     spree_product_import (0.0.1.alpha)
       delayed_job
+      delayed_job_active_record
       paperclip
       spree_core (>= 3.1.0, < 4.0)
       spree_extension
@@ -106,6 +107,9 @@ GEM
       rainbow (>= 2.1.0)
     delayed_job (4.1.7)
       activesupport (>= 3.0, < 5.3)
+    delayed_job_active_record (4.1.3)
+      activerecord (>= 3.0, < 5.3)
+      delayed_job (>= 3.0, < 5)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -380,6 +384,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   delayed_job
+  delayed_job_active_record
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)

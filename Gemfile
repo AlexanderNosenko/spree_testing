@@ -36,6 +36,8 @@ gem 'spree_auth_devise', '~> 3.3'
 gem 'spree_gateway', '~> 3.3'
 
 gem 'delayed_job'
+gem 'delayed_job_active_record'
+
 gem 'spree_product_import', path: './spree_product_import'
 
 group :development, :test do
