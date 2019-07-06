@@ -20,9 +20,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'spree_core', '>= 3.1.0', '< 4.0'
   s.add_dependency 'spree_extension'
-  s.add_dependency 'delayed_job'
   s.add_dependency 'paperclip'
 
+  s.add_development_dependency 'byebug'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_girl'
   s.add_development_dependency 'ffaker'
