@@ -19,6 +19,15 @@ describe Spree::ProductImport do
       expect(Spree::ProductImportJob).to have_received(:perform_later).with(product_import.id)
     end
   end
+
+  describe '#process_data_file' do
+    it 'should return true when service succeeds' do
+      service_double = double(call: { status: :success })
+      allow(Spree::ProductImportService).to receive(:new).and_return(service_double)
+
+      expect(create(:product_import).process_data_file).to eq(true)
+    end
+  end
 end
 
 

@@ -81,12 +81,12 @@ module Spree
       product.save
     end
 
+    def valid_row?(values)
+      required_fields = ['name', 'price', 'category']
+
+      required_fields.all? { |field_name| values[field_name].present? }
+    end
+
     class ImportError < StandardError; end
-  end
-
-  def valid_row?(values)
-    required_fields = ['name', 'price', 'category']
-
-    required_fields.all? { |field_name| values[field_name].present? }
   end
 end
