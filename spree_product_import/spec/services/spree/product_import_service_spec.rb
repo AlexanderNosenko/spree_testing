@@ -1,6 +1,5 @@
 describe Spree::ProductImportService do
   stub_paperclip(Spree::ProductImportService)
-  IMPORT_FILE_ENTRIES_NO = 1
 
   describe '#call' do
 
@@ -18,7 +17,11 @@ describe Spree::ProductImportService do
       it 'should create all valid products from data_file' do
         products_no_before = Spree::Product.count
 
-        service = described_class.new(product_import.id, product_import_file[:file])
+        config = {
+          headers: true,
+          col_sep: ';',
+        }
+        service = described_class.new(product_import.id, product_import_file[:file], config)
         service_response = service.call
 
         expect(service_response[:status]).to eq :success
