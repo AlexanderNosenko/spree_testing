@@ -16,13 +16,13 @@ describe Spree::ProductImportService do
 
     context 'without all valid entries' do
       it 'should create all valid products from data_file' do
-        products_no_before = Spree::ProductImport.count
+        products_no_before = Spree::Product.count
 
         service = described_class.new(product_import.id, product_import_file[:file])
         service_response = service.call
 
         expect(service_response[:status]).to eq :success
-        expect(Spree::ProductImport.count).to eq products_no_before + product_import_file[:valid_entrires_no]
+        expect(Spree::Product.count).to eq products_no_before + product_import_file[:valid_entrires_no]
       end
     end
 
